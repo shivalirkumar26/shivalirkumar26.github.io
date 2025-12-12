@@ -499,7 +499,7 @@ a:hover {
 
 /* tile background + border override */
 #project-cyclistic {
-  background: #FFFFFF !important;             /* panel beige */
+  background: #FCFAF6 !important;             /* panel beige */
   border: 1px solid #E1D2C3 !important;       /* soft sand border */
   box-shadow: 0 8px 22px rgba(46,38,30,0.06) !important;
 }
