@@ -1,54 +1,203 @@
-<!--
-📁 File: index.html
-This is your main portfolio file for GitHub Pages using Variant A (Sidebar layout with pastel green theme)
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shivali | Data Analyst</title>
+  <title>Shivali | BI Analyst Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <div class="sidebar">
-    <img src="profile.jpg" alt="Shivali" class="profile-pic">
-    <h1>Shivali</h1>
-    <p>Data Analyst</p>
-    <div class="socials">
-      <a href="mailto:your.email@example.com">✉️</a>
-      <a href="https://linkedin.com/in/your-profile">in</a>
-      <a href="https://github.com/yourusername">gh</a>
+  <div class="container">
+    <div class="sidebar">
+      <img src="photo.jpeg" alt="Shivali Ravindra Kumar">
+      <nav>
+        <ul>
+          <li><a href="#home" class="nav-link active" onclick="showTab('home')">HOME</a></li>
+          <li><a href="#about" class="nav-link" onclick="showTab('about')">ABOUT</a></li>
+          <li><a href="#projects" class="nav-link" onclick="showTab('projects')">PROJECTS</a></li>
+          <li><a href="#resume" class="nav-link" onclick="showTab('resume')">RESUME</a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-contact-icons">
+  <a href="mailto:shivali.ravindrakumar@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+  <a href="https://www.linkedin.com/in/shivali-r-kumar" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  <a href="https://github.com/shivalirkumar26" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+</div>
+    </div>
+
+    <div class="main-content">
+      <section id="home" class="tab-content">
+        <div class="home-content">
+          <h1>WELCOME!</h1>
+          <p class="intro-text">
+            I’m Shivali, a data professional with a curious mind and a love for meaningful work.<br><br>
+            This portfolio brings together my experiences, projects, and a glimpse into how I think.
+          </p>
+        </div>
+      </section>
+
+      <section id="about" class="tab-content">
+  <div class="about-wrapper-flex">
+    <div class="about-left">
+      <h1><span class="highlight">SHIVALI</span> RAVINDRA KUMAR</h1>
+      <p><i class="fas fa-map-marker-alt icon-green"></i> Esslingen am Neckar, Germany</p>
+      <p><i class="fas fa-phone icon-green"></i> +49 172 8768128</p>
+      <p><i class="fas fa-envelope icon-green"></i> 
+        <a href="mailto:shivali.ravindrakumar@gmail.com" class="email-green">shivali.ravindrakumar@gmail.com</a>
+      </p>
+      <div class="social-icons about-icons">
+        <a href="https://www.linkedin.com/in/shivali-r-kumar" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/shivalirkumar26" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="about-text">
+        <p>I’m a detail-driven data professional with 4 years of industry experience and a passion for transforming complexity into clarity.</p>
+        <p>From my early curiosity about how technology shapes our world, I pursued a Bachelor’s in Computer Science and stepped into the world of data analytics with Accenture in 2020. Over the years, I grew from an Associate BI Analyst to a Senior BI Analyst – a fast-tracked journey fueled by my love for solving meaningful problems. Whether it was building high-impact dashboards, untangling messy data, or automating workflows across teams, I thrived on making things efficient, beautiful, and usable.</p>
+        <p>My work ethic blends precision with empathy. I enjoy building tools that empower others, and I strive for clarity – in code, in visuals, and in communication. I’m also known for my strong sense of structure and for spotting inconsistencies that others might overlook.</p>
+        <p>Outside of work, I enjoy organizing and planning things, often bringing my data skills into everyday life – whether it’s creating trackers, building comparison sheets, or designing systems that simplify decision-making. I’ve always been someone who enjoys tidy structures, clean visuals, and elegant logic.</p>
+        <p>Having recently moved to Germany, I’m excited about the next chapter in my professional journey. I’m currently pursuing my Master’s in Business Intelligence, building on my foundation and exploring new opportunities to grow – both as a specialist and as someone who contributes to the bigger picture.</p>
+      </div>
+    </div>
+
+<div class="vertical-timeline">
+  <div class="timeline-wrapper">
+  <div class="timeline-entry">
+    <p class="role">M.Sc. Business Intelligence</p>
+    <p class="company">IU University of Applied Sciences, Germany</p>
+    <p class="year">2025–2027</p>
+  </div>
+  <div class="timeline-entry">
+    <p class="role">Senior BI Analyst</p>
+    <p class="company">Accenture, India</p>
+    <p class="year">2024</p>
+  </div>
+  <div class="timeline-entry">
+    <p class="role">BI Analyst</p>
+    <p class="company">Accenture, India</p>
+    <p class="year">2022–2024</p>
+  </div>
+  <div class="timeline-entry">
+    <p class="role">Associate BI Analyst</p>
+    <p class="company">Accenture, India</p>
+    <p class="year">2020–2022</p>
+  </div>
+  <div class="timeline-entry">
+    <p class="role">B.E. Computer Science & Engineering</p>
+    <p class="company">GSSSIETW, India</p>
+    <p class="year">2016–2020</p>
+  </div>
+</div>
+
+  <!-- ✅ Cert badges sit outside the green line -->
+ <div class="cert-badges-honeycomb">
+  <a href="https://www.coursera.org/account/accomplishments/specialization/JYZLTJLX9T8S" target="_blank">
+    <img src="google-data-analytics.png" alt="Google Data Analytics Badge">
+  </a>
+  <a href="https://learn.microsoft.com/en-us/users/ravindrakumarshivali-6860/transcript/d82mos08j2w265x" target="_blank">
+    <img src="pl300.png" alt="PL-300 Badge">
+  </a>
+  <a href="https://learn.microsoft.com/en-us/users/ravindrakumarshivali-6860/transcript/d82mos08j2w265x" target="_blank">
+    <img src="pl900.png" alt="PL-900 Badge">
+  </a>
+</div>
+
+    </div> <!-- .vertical-timeline -->
+  </div>   <!-- .about-wrapper-flex -->
+
+</section> <!-- ✅ properly close #about here -->
+
+      <section id="projects" class="tab-content">
+        <div class="content-wrapper">
+          <!-- Cyclistic project tile -->
+<article class="project-tile" id="project-cyclistic" style="border-radius:8px; background:#fff; box-shadow:0 6px 18px rgba(0,0,0,0.08); padding:18px; margin:16px 0; display:flex; gap:18px; align-items:flex-start;">
+  <!-- left: thumbnail -->
+  <a href="https://public.tableau.com/views/CyclisticRiderBehaviorMembershipOpportunity2023/CyclisticUsageMemberConversionInsights2023" target="_blank" rel="noopener noreferrer" style="flex:0 0 360px; display:block;">
+    <img src="https://raw.githubusercontent.com/shivalirkumar26/cyclistic-capstone/main/dashboard/dashboard.png"
+         alt="Cyclistic dashboard thumbnail — station popularity map and conversion funnel"
+         style="width:100%; height:auto; border-radius:6px; display:block;"/>
+  </a>
+
+  <!-- right: text + buttons -->
+  <div style="flex:1; min-width:260px;">
+    <h3 style="margin:0 0 8px 0; font-size:18px; color:#333;">Cyclistic Rider Insights — 2023</h3>
+
+    <p style="margin:0 0 12px 0; color:#555; line-height:1.35;">
+      Behavioral analysis of Cyclistic riders (members vs casual) — trends, hourly patterns, ride length distribution, station demand and conversion opportunities.
+    </p>
+
+    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+      <!-- View dashboard -->
+      <a class="btn" href="https://public.tableau.com/views/CyclisticRiderBehaviorMembershipOpportunity2023/CyclisticUsageMemberConversionInsights2023" target="_blank" rel="noopener noreferrer"
+         style="text-decoration:none; padding:8px 12px; border-radius:6px; background:#4A90E2; color:white; font-weight:600;">View Dashboard</a>
+
+      <!-- View code -->
+      <a class="btn" href="https://github.com/shivalirkumar26/cyclistic-capstone" target="_blank" rel="noopener noreferrer"
+         style="text-decoration:none; padding:8px 12px; border-radius:6px; background:#f5f5f5; color:#333; border:1px solid #ddd;">View Code</a>
+
+      <!-- Download PDF -->
+      <a class="btn" href="https://raw.githubusercontent.com/shivalirkumar26/cyclistic-capstone/main/dashboard/dashboard.pdf" target="_blank" rel="noopener noreferrer"
+         style="text-decoration:none; padding:8px 12px; border-radius:6px; background:#F5A623; color:white; font-weight:600;">Download PDF</a>
+    </div>
+
+    <div style="margin-top:12px; font-size:13px; color:#777;">
+      Tools: PostgreSQL · Tableau Public &nbsp; • &nbsp; Year: 2025
+    </div>
+  </div>
+</article>
+<!-- End Cyclistic project tile -->
+        </div>
+      </section>
+
+      <section id="resume" class="tab-content">
+        <div class="content-wrapper">
+          <h2>Resume</h2>
+          <p><a href="Shivali_Ravindra_Kumar_Resume.pdf" target="_blank">Download My Resume (PDF)</a></p>
+        </div>
+      </section>
     </div>
   </div>
 
-  <div class="main-content">
-    <section id="about">
-      <h2>About</h2>
-      <p>I am a passionate data analyst with a strong background in statistical analysis and data visualization. I love turning data into actionable insights that drive strategic decision-making. I enjoy solving business problems using tools like SQL, Power BI, and Python.</p>
-    </section>
+  <script>
+  function showTab(tabId) {
+    const tabs = document.querySelectorAll(".tab-content");
+    tabs.forEach(tab => {
+      tab.style.display = "none";           // hide all
+      tab.classList.remove("active-tab");   // remove active styling
+    });
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Sales Dashboard</strong> – Built using Power BI to visualize regional trends and monthly performance.</li>
-        <li><strong>Churn Analysis</strong> – Conducted SQL + Python-based exploratory data analysis on customer behavior.</li>
-        <li><strong>Google Capstone Project</strong> – Wrangled bike-share data and communicated trends via visualization.</li>
-      </ul>
-    </section>
+    const activeTab = document.getElementById(tabId);
+    activeTab.style.display = "flex";        // show this tab
+    activeTab.classList.add("active-tab");   // apply layout style
 
-    <section id="resume">
-      <h2>Resume</h2>
-      <p><a href="resume.pdf" download>Download My Resume (PDF)</a></p>
-    </section>
+    // Update active nav link
+    const links = document.querySelectorAll(".nav-link");
+    links.forEach(link => link.classList.remove("active"));
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: your.email@example.com</p>
-    </section>
-  </div>
+    const activeLink = Array.from(links).find(link => link.getAttribute("href") === "#" + tabId);
+    if (activeLink) activeLink.classList.add("active");
+  }
+
+  // Set default tab on first load
+  window.addEventListener("DOMContentLoaded", () => {
+    showTab("home");
+  });
+</script>
+  
+  <script>
+  // Intersection Observer to animate timeline items on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.timeline-item').forEach(item => {
+    observer.observe(item);
+  });
+</script>
 </body>
 </html>
