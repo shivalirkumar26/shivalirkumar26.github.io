@@ -179,9 +179,14 @@
   }
 
   // Set default tab on first load
-  window.addEventListener("DOMContentLoaded", () => {
+ window.addEventListener("DOMContentLoaded", () => {
+  const hash = window.location.hash.replace("#", "");
+  if (hash) {
+    showTab(hash);
+  } else {
     showTab("home");
-  });
+  }
+});
 </script>
   
   <script>
