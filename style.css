@@ -719,10 +719,28 @@ a:hover {
 
   /* --- FOOTER (VIEWS COUNTER) --- */
   .portfolio-footer {
-    position: relative;   /* no absolute positioning */
-    margin-top: 10px;
-    padding-bottom: 6px;
-    pointer-events: none;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;        /* ⬅ push to right */
+  left: auto;
+  width: auto;
+  text-align: right; /* ⬅ align text to right */
+  font-size: 12px;
+  color: #6d6a66;
+  pointer-events: none;
+  }
+
+  .visit-counter {
+  font-weight: 600;
+  margin-bottom: 4px;
+  }
+
+  .desktop-hint {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    color: rgba(47,44,39,0.7);
+    opacity: 0.8;
   }
 
   /* --- MAIN CONTENT --- */
@@ -772,16 +790,26 @@ a:hover {
   .project-tile {
     flex-direction: column !important;
     gap: 14px !important;
+    align-items: flex-start;
+  }
+
+  .project-tile > a:first-child {
+  flex: 0 0 auto !important;  /* remove fixed width */
+  max-width: 320px;          /* controlled image column */
   }
 
   .project-tile img {
     width: 100% !important;
     height: auto !important;
+    display: block;
   }
 
   .project-tile .btn {
-    width: 100%;
-    text-align: center;
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
   }
 
   /* --- RESUME --- */
@@ -790,6 +818,8 @@ a:hover {
   }
 
   .resume-download-btn {
-    width: 100%;
+  width: auto;
+  display: inline-block;
+  padding: 10px 18px;
   }
 }
