@@ -131,6 +131,14 @@ body {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   background-color: transparent;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    width: calc(100vw - 190px); /* match sidebar width */
+    overflow-x: hidden;
+  }
 }
 
 /* ========== TABS GENERAL ========== */
