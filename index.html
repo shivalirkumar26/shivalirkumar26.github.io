@@ -8,6 +8,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script
+  data-goatcounter="https://shivali-portfolio.goatcounter.com/count"
+  async
+  src="//gc.zgo.at/count.js">
+</script>
 </head>
 <body>
   <div class="container">
@@ -38,8 +43,8 @@
   <!-- FOOTER -->
   <div class="portfolio-footer">
   <div class="visit-counter">
-  Views: <span id="gc-count">–</span>
-</div>
+    Views: <span id="gc-count">–</span>
+  </div>
 
   <div class="desktop-hint">
     Best viewed on desktop
@@ -347,23 +352,28 @@
   });
 </script>
 
-<script
-  data-goatcounter="https://shivali-portfolio.goatcounter.com/count"
-  async
-  src="//gc.zgo.at/count.js">
-</script>
+
   
 <script>
+(function () {
   var t = setInterval(function () {
-    if (window.goatcounter && window.goatcounter.visit_count) {
+    if (window.goatcounter && window.goatcounter.get_data) {
       clearInterval(t);
-      window.goatcounter.visit_count({
-        append: '#gc-count',
-        no_branding: true,
-        path: 'TOTAL'
-      });
+
+      // TOTAL = site-wide visits (matches GoatCounter dashboard)
+      fetch('https://shivali-portfolio.goatcounter.com/counter/TOTAL.json')
+        .then(res => res.json())
+        .then(data => {
+          var el = document.getElementById('gc-count');
+          if (el) el.textContent = data.count;
+        })
+        .catch(() => {
+          var el = document.getElementById('gc-count');
+          if (el) el.textContent = '–';
+        });
     }
-  }, 100);
+  }, 200);
+})();
 </script>
   
 </body>
