@@ -848,3 +848,32 @@ a:hover {
     text-align: center;
   }
 }
+
+/* =========================
+   Portfolio Footer (Sidebar)
+   ========================= */
+
+.portfolio-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 12px;
+  color: #4A473E;
+  opacity: 0.85;
+}
+
+.visit-counter {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.desktop-hint {
+  font-size: 11px;
+  color: #6d6a66;
+}
+
+/* Mobile: soften message */
+@media (max-width: 768px) {
+  .desktop-hint {
+    font-style: italic;
+  }
+}
