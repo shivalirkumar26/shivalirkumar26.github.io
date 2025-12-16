@@ -879,6 +879,7 @@ a:hover {
    ========================= */
 
 .portfolio-footer {
+  margin-top: auto;        /* 🔥 THIS fixes visibility */
   text-align: center;
   font-size: 12px;
   color: #6d6a66;
@@ -888,11 +889,6 @@ a:hover {
 .visit-counter {
   margin-bottom: 6px;
   font-weight: 600;
-}
-
-.desktop-hint {
-  font-size: 11px;
-  color: #4A473E;
 }
 
 /* Mobile: soften message */
