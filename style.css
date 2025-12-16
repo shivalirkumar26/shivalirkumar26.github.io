@@ -134,6 +134,7 @@ body {
   min-height: 100vh;
   padding: 40px 80px;
   color: #2F2C27;
+  overflow-x: hidden;
 }
 
 .tab-content.active-tab {
@@ -540,6 +541,11 @@ a:hover {
   transform: translateY(-2px) !important;
 }
 
+/* Ensure project buttons size to content on desktop */
+.project-tile .btn {
+  width: auto;
+  white-space: nowrap;
+}
 /* =========================
    Project Insight Line
    ========================= */
@@ -594,6 +600,8 @@ a:hover {
 /* Resume image preview */
 .resume-preview {
   margin: 24px auto 20px auto;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .resume-preview img {
@@ -720,7 +728,7 @@ a:hover {
   /* --- FOOTER (VIEWS COUNTER) --- */
   .portfolio-footer {
   position: absolute;
-  bottom: 12px;
+  bottom: 14px;
   right: 12px;        /* ⬅ push to right */
   left: auto;
   width: auto;
@@ -728,6 +736,7 @@ a:hover {
   font-size: 12px;
   color: #6d6a66;
   pointer-events: none;
+  line-height: 1.4;   /* ✅ adds vertical breathing space */
   }
 
   .visit-counter {
@@ -805,10 +814,7 @@ a:hover {
   }
 
   .project-tile .btn {
-  width: auto;
-  min-width: 0;
-  max-width: 100%;
-  white-space: normal;
+  width: 100%;
   text-align: center;
   }
 
