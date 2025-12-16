@@ -8,11 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
- <script
-  data-goatcounter="https://shivali-portfolio.goatcounter.com/count"
-  async
-  src="//gc.zgo.at/count.js">
-</script>
 </head>
 <body>
   <div class="container">
@@ -43,7 +38,7 @@
   <!-- FOOTER -->
   <div class="portfolio-footer">
    <div class="visit-counter">
-  Views: <span data-goatcounter-count="total">0</span>
+  Views: <span id="gc-count">–</span>
 </div>
     <div class="desktop-hint">Best viewed on desktop</div>
   </div>
@@ -348,5 +343,25 @@
     observer.observe(item);
   });
 </script>
+
+  <script
+  data-goatcounter="https://shivali-portfolio.goatcounter.com/count"
+  async
+  src="//gc.zgo.at/count.js">
+</script>
+
+  <script>
+  window.addEventListener("load", function () {
+    if (window.goatcounter && goatcounter.visit_count) {
+      goatcounter.visit_count({
+        append: false,
+        type: "total",
+        path: "/",
+        element: "#gc-count"
+      });
+    }
+  });
+</script>
+  
 </body>
 </html>
