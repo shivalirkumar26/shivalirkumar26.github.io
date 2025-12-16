@@ -113,16 +113,6 @@ body {
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .desktop-hint {
-    display: block;
-    margin-top: 6px;
-    font-size: 11px;
-    color: rgba(47,44,39,0.7);
-    text-align: center;
-  }
-}
-
 /* ========== MAIN CONTENT ========== */
 .main-content {
   flex: 1;
@@ -180,21 +170,6 @@ body {
   animation: fadeIn 1.5s ease;
   color: #2F2C27;
   z-index: 1;
-}
-
-@media (max-width: 768px) {
-  #home .home-content {
-    background: rgba(246, 239, 231, 0.85);
-    border-radius: 14px;
-    padding: 20px;
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-  .tab-content {
-    max-width: 100%;
-  }
 }
 
 #home h1 {
@@ -453,128 +428,6 @@ a:hover {
   }
 }
 
-/* Mobile phones */
-@media (max-width: 768px) {
-
-  /* KEEP DESKTOP STRUCTURE */
-  .container {
-    flex-direction: row;
-  }
-
-  /* Sidebar stays LEFT */
-  .sidebar {
-    width: 180px;
-    height: auto;
-    padding: 14px 10px;
-    justify-content: center;
-    position: relative;
-    top: auto;
-    z-index: 20;
-    box-shadow: 0 4px 12px rgba(46,38,30,0.18);
-  }
-
-  /* Smaller profile image */
-  .sidebar img {
-    width: 88px;
-    margin-bottom: 14px;
-  }
-
-  /* Vertical nav stays vertical */
-  .sidebar nav ul {
-    display: block;
-  }
-
-  .sidebar nav ul li {
-    margin-bottom: 8px;
-  }
-
-  .sidebar nav ul li a {
-    font-size: 15px;
-    padding: 6px 8px;
-  }
-
-  /* Contact icons slightly smaller */
-  .sidebar .sidebar-contact-icons a i {
-    font-size: 1.3rem;
-  }
-
-  /* Main content spacing */
-  .tab-content {
-    padding: 20px 18px;
-    min-height: 100vh;
-  }
-
-  /* ---------- HOME SECTION FIX ---------- */
-
-  #home {
-    background-position: center;
-    background-size: cover;
-  }
-
-  #home .home-content {
-    background: rgba(246, 239, 231, 0.88);
-    border-radius: 14px;
-    padding: 18px;
-    max-width: 92%;
-  }
-
-  #home h1 {
-    font-size: 1.6rem;
-  }
-
-  .intro-text {
-    font-size: 1rem;
-  }
-
-  /* ---------- ABOUT SECTION ---------- */
-
-  .about-wrapper-flex {
-    flex-direction: column;
-    gap: 28px;
-  }
-
-  .about-left,
-  .about-right {
-    max-width: 100%;
-  }
-
-  /* ---------- PROJECT TILES ---------- */
-
-  .project-tile {
-    flex-direction: column !important;
-    gap: 14px !important;
-  }
-
-  .project-tile a:first-child {
-    width: 100% !important;
-  }
-
-  .project-tile img {
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .project-tile .btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .project-tile .btn + .btn {
-    margin-top: 6px;
-  }
-
-  /* ---------- TYPOGRAPHY ---------- */
-
-  h3 {
-    font-size: 1.1rem;
-  }
-
-  .project-tile p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-}
-
 /* -------------------------
    Cyclistic tile - color overrides
    (keeps existing HTML / inline layout)
@@ -657,87 +510,6 @@ a:hover {
 @media (max-width: 920px) {
   #project-cyclistic { padding: 14px !important; }
   #project-cyclistic a[ href*="public.tableau.com" ] { flex: none !important; width: 100% !important; }
-}
-
-/* =========================
-   Mobile Project Tile Layout
-   ========================= */
-@media (max-width: 768px) {
-
-  .project-tile {
-    flex-direction: column !important;
-    gap: 14px !important;
-  }
-
-  .project-tile a:first-child {
-    flex: none !important;
-    width: 100% !important;
-  }
-
-  .project-tile img {
-    width: 100% !important;
-    height: auto !important;
-  }
-
-}
-
-/* =========================
-   Mobile Project Buttons
-   ========================= */
-@media (max-width: 768px) {
-
-  .project-tile .btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .project-tile .btn + .btn {
-    margin-top: 6px;
-  }
-
-}
-
-/* =========================
-   Mobile Spacing Cleanup
-   ========================= */
-@media (max-width: 768px) {
-
-  .tab-content {
-    padding: 18px 16px;
-  }
-
-}
-
-/* =========================
-   Mobile Typography Tweaks
-   ========================= */
-@media (max-width: 768px) {
-
-  h3 {
-    font-size: 1.1rem;
-  }
-
-  .project-tile p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  .intro-text {
-    font-size: 1rem;
-  }
-
-}
-
-/* =========================
-   Mobile Header Polish
-   ========================= */
-@media (max-width: 768px) {
-
-  .sidebar a {
-    font-size: 14px;
-    padding: 6px 10px;
-  }
-
 }
 
 
@@ -857,18 +629,6 @@ a:hover {
   box-shadow: 0 12px 26px rgba(46,38,30,0.18);
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .resume-preview img {
-    max-width: 100%;
-  }
-
-  .resume-download-btn {
-    width: 100%;
-    text-align: center;
-  }
-}
-
 /* =========================
    Portfolio Footer (Sidebar)
    ========================= */
@@ -891,9 +651,145 @@ a:hover {
   text-align: center;
 }
 
-/* Mobile: soften message */
+
+/* =========================================================
+   MOBILE LAYOUT — SAFE, NON-BREAKING
+   ========================================================= */
 @media (max-width: 768px) {
-  .desktop-hint {
-    font-style: italic;
+
+  /* --- GLOBAL FIXES --- */
+  html, body {
+    width: 100%;
+    height: auto;
+    overflow-x: auto;   /* allow horizontal scroll if needed */
+  }
+
+  .container {
+    flex-direction: column;   /* sidebar goes on top */
+    width: 100%;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  /* --- SIDEBAR AS TOP HEADER --- */
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 16px 12px;
+    box-shadow: none;
+    position: relative;   /* NOT sticky */
+  }
+
+  .sidebar-main {
+    width: 100%;
+    flex: none;
+    justify-content: center;
+  }
+
+  /* Profile image */
+  .sidebar img {
+    width: 90px;
+    margin-bottom: 10px;
+  }
+
+  /* --- NAVIGATION: HORIZONTAL --- */
+  .sidebar nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;   /* wraps only if absolutely needed */
+  }
+
+  .sidebar nav ul li {
+    margin: 0;
+  }
+
+  .sidebar nav ul li a {
+    font-size: 14px;
+    padding: 6px 10px;
+    white-space: nowrap;
+  }
+
+  /* --- CONTACT ICONS --- */
+  .sidebar .sidebar-contact-icons {
+    margin-top: 10px;
+  }
+
+  /* --- FOOTER (VIEWS COUNTER) --- */
+  .portfolio-footer {
+    position: relative;   /* no absolute positioning */
+    margin-top: 10px;
+    padding-bottom: 6px;
+    pointer-events: none;
+  }
+
+  /* --- MAIN CONTENT --- */
+  .main-content {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+  }
+
+  .tab-content {
+    min-height: auto;
+    width: 100%;
+    padding: 24px 18px;
+  }
+
+  /* --- HOME SECTION --- */
+  #home {
+    min-height: auto;
+    padding: 40px 0;
+  }
+
+  #home .home-content {
+    max-width: 92%;
+    padding: 18px;
+  }
+
+  #home h1 {
+    font-size: 1.6rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  /* --- ABOUT SECTION --- */
+  .about-wrapper-flex {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .about-left,
+  .about-right {
+    max-width: 100%;
+  }
+
+  /* --- PROJECT TILES --- */
+  .project-tile {
+    flex-direction: column !important;
+    gap: 14px !important;
+  }
+
+  .project-tile img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .project-tile .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* --- RESUME --- */
+  .resume-preview img {
+    max-width: 100%;
+  }
+
+  .resume-download-btn {
+    width: 100%;
   }
 }
