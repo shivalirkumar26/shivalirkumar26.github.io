@@ -10,7 +10,7 @@ body {
 
 .container {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   overflow: hidden;
   flex-direction: row;
@@ -136,8 +136,7 @@ body {
 
 @media (max-width: 768px) {
   .main-content {
-    width: calc(100vw - 190px); /* match sidebar width */
-    overflow-x: hidden;
+    max-width: 100%;
   }
 }
 
@@ -198,8 +197,7 @@ body {
 
 @media (max-width: 768px) {
   .tab-content {
-    min-height: auto;
-    padding-top: 20px;
+    max-width: 100%;
   }
 }
 
