@@ -595,6 +595,11 @@ a:hover {
    Resume Section Styling
    ========================= */
 
+#resume h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
 .resume-wrapper {
   max-width: 900px;
   margin: 0 auto;
@@ -603,7 +608,7 @@ a:hover {
 
 /* Resume image preview */
 .resume-preview {
-  margin: 24px auto 20px auto;
+  margin: 12px auto 16px auto;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -619,7 +624,7 @@ a:hover {
 
 /* Resume action area */
 .resume-actions {
-  margin-top: 20px;
+  margin-top: 12px;
 }
 
 /* Download button – same as View Dashboard */
