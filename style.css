@@ -107,7 +107,10 @@ body {
 }
 
 .desktop-hint {
-  display: none;   /* hidden on desktop by default */
+  display: none; /* hidden by default */
+  font-size: 11px;
+  color: #4A473E;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -881,6 +884,7 @@ a:hover {
   font-size: 12px;
   color: #6d6a66;
   opacity: 0.85;
+  padding-bottom: 10px;
 }
 
 .visit-counter {
