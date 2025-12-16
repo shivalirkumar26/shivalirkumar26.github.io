@@ -10,10 +10,14 @@ body {
 
 .container {
   display: flex;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   overflow: hidden;
   flex-direction: row;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 /* ========== SIDEBAR ========== */
@@ -25,7 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 100vh;
   z-index: 2;
   position: relative;
@@ -98,6 +102,21 @@ body {
   transform: translateY(-3px);
 }
 
+.sidebar-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;   /* ✅ THIS fixes the photo jump */
+}
+
+.desktop-hint {
+  display: none; /* hidden by default */
+  font-size: 11px;
+  color: #4A473E;
+  text-align: center;
+}
+
 /* ========== MAIN CONTENT ========== */
 .main-content {
   flex: 1;
@@ -106,7 +125,10 @@ body {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   background-color: transparent;
+  min-width: 0;
 }
+
+
 
 /* ========== TABS GENERAL ========== */
 .tab-content {
@@ -116,6 +138,7 @@ body {
   min-height: 100vh;
   padding: 40px 80px;
   color: #2F2C27;
+  overflow-x: hidden;
 }
 
 .tab-content.active-tab {
@@ -152,22 +175,6 @@ body {
   animation: fadeIn 1.5s ease;
   color: #2F2C27;
   z-index: 1;
-}
-
-@media (max-width: 768px) {
-  #home .home-content {
-    background: rgba(246, 239, 231, 0.85);
-    border-radius: 14px;
-    padding: 20px;
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-  .tab-content {
-    min-height: auto;
-    padding-top: 20px;
-  }
 }
 
 #home h1 {
@@ -426,128 +433,6 @@ a:hover {
   }
 }
 
-/* Mobile phones */
-@media (max-width: 768px) {
-
-  /* KEEP DESKTOP STRUCTURE */
-  .container {
-    flex-direction: row;
-  }
-
-  /* Sidebar stays LEFT */
-  .sidebar {
-    width: 190px;
-    height: 100vh;
-    padding: 14px 10px;
-    justify-content: center;
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    box-shadow: 0 4px 12px rgba(46,38,30,0.18);
-  }
-
-  /* Smaller profile image */
-  .sidebar img {
-    width: 88px;
-    margin-bottom: 14px;
-  }
-
-  /* Vertical nav stays vertical */
-  .sidebar nav ul {
-    display: block;
-  }
-
-  .sidebar nav ul li {
-    margin-bottom: 8px;
-  }
-
-  .sidebar nav ul li a {
-    font-size: 15px;
-    padding: 6px 8px;
-  }
-
-  /* Contact icons slightly smaller */
-  .sidebar .sidebar-contact-icons a i {
-    font-size: 1.3rem;
-  }
-
-  /* Main content spacing */
-  .tab-content {
-    padding: 20px 18px;
-    min-height: 100vh;
-  }
-
-  /* ---------- HOME SECTION FIX ---------- */
-
-  #home {
-    background-position: center;
-    background-size: cover;
-  }
-
-  #home .home-content {
-    background: rgba(246, 239, 231, 0.88);
-    border-radius: 14px;
-    padding: 18px;
-    max-width: 92%;
-  }
-
-  #home h1 {
-    font-size: 1.6rem;
-  }
-
-  .intro-text {
-    font-size: 1rem;
-  }
-
-  /* ---------- ABOUT SECTION ---------- */
-
-  .about-wrapper-flex {
-    flex-direction: column;
-    gap: 28px;
-  }
-
-  .about-left,
-  .about-right {
-    max-width: 100%;
-  }
-
-  /* ---------- PROJECT TILES ---------- */
-
-  .project-tile {
-    flex-direction: column !important;
-    gap: 14px !important;
-  }
-
-  .project-tile a:first-child {
-    width: 100% !important;
-  }
-
-  .project-tile img {
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .project-tile .btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .project-tile .btn + .btn {
-    margin-top: 6px;
-  }
-
-  /* ---------- TYPOGRAPHY ---------- */
-
-  h3 {
-    font-size: 1.1rem;
-  }
-
-  .project-tile p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-}
-
 /* -------------------------
    Cyclistic tile - color overrides
    (keeps existing HTML / inline layout)
@@ -632,94 +517,6 @@ a:hover {
   #project-cyclistic a[ href*="public.tableau.com" ] { flex: none !important; width: 100% !important; }
 }
 
-/* =========================
-   Mobile Project Tile Layout
-   ========================= */
-@media (max-width: 768px) {
-
-  .project-tile {
-    flex-direction: column !important;
-    gap: 14px !important;
-  }
-
-  .project-tile a:first-child {
-    flex: none !important;
-    width: 100% !important;
-  }
-
-  .project-tile img {
-    width: 100% !important;
-    height: auto !important;
-  }
-
-}
-
-/* =========================
-   Mobile Project Buttons
-   ========================= */
-@media (max-width: 768px) {
-
-  .project-tile .btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .project-tile .btn + .btn {
-    margin-top: 6px;
-  }
-
-}
-
-/* =========================
-   Mobile Spacing Cleanup
-   ========================= */
-@media (max-width: 768px) {
-
-  .tab-content {
-    padding: 18px 16px;
-  }
-
-}
-
-/* =========================
-   Mobile Typography Tweaks
-   ========================= */
-@media (max-width: 768px) {
-
-  h3 {
-    font-size: 1.1rem;
-  }
-
-  .project-tile p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  .intro-text {
-    font-size: 1rem;
-  }
-
-}
-
-/* =========================
-   Mobile Header Polish
-   ========================= */
-@media (max-width: 768px) {
-
-  .sidebar {
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    box-shadow: 0 4px 12px rgba(46,38,30,0.18);
-  }
-
-  .sidebar a {
-    font-size: 14px;
-    padding: 6px 10px;
-  }
-
-}
-
 
 /* -------------------------
    Executive KPI tile styling
@@ -748,6 +545,11 @@ a:hover {
   transform: translateY(-2px) !important;
 }
 
+/* Ensure project buttons size to content on desktop */
+.project-tile .btn {
+  width: auto;
+  white-space: nowrap;
+}
 /* =========================
    Project Insight Line
    ========================= */
@@ -787,4 +589,257 @@ a:hover {
   color: #4A473E;
   border: 1px solid rgba(160, 124, 72, 0.28);
   white-space: nowrap;
+}
+
+/* =========================
+   Resume Section Styling
+   ========================= */
+
+#resume h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.resume-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Resume image preview */
+.resume-preview {
+  margin: 12px auto 16px auto;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.resume-preview img {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 10px;
+  box-shadow: 0 10px 28px rgba(46,38,30,0.12);
+  border: 1px solid rgba(225,210,195,0.6);
+  background: #fff;
+}
+
+/* Resume action area */
+.resume-actions {
+  margin-top: 12px;
+}
+
+/* Download button – same as View Dashboard */
+.resume-download-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  background: #4A473E;       /* SAME as dashboard button */
+  color: #F6EFE7;
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.resume-download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(46,38,30,0.18);
+}
+
+#resume {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* =========================
+   Portfolio Footer (Sidebar)
+   ========================= */
+
+.portfolio-footer {
+  position: absolute;
+  bottom: 12px;          /* stick to bottom */
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #6d6a66;
+  pointer-events: none;  /* avoids interaction issues */
+}
+
+.visit-counter {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4A473E;
+  text-align: center;
+}
+
+
+/* =========================================================
+   MOBILE LAYOUT — SAFE, NON-BREAKING
+   ========================================================= */
+@media (max-width: 768px) {
+
+  /* --- GLOBAL FIXES --- */
+  html, body {
+    width: 100%;
+    height: auto;
+    overflow-x: auto;   /* allow horizontal scroll if needed */
+  }
+
+  .container {
+    flex-direction: column;   /* sidebar goes on top */
+    width: 100%;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  /* --- SIDEBAR AS TOP HEADER --- */
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 16px 12px;
+    box-shadow: none;
+    position: relative;   /* NOT sticky */
+  }
+
+  .sidebar-main {
+    width: 100%;
+    flex: none;
+    justify-content: center;
+  }
+
+  /* Profile image */
+  .sidebar img {
+    width: 90px;
+    margin-bottom: 10px;
+  }
+
+  /* --- NAVIGATION: HORIZONTAL --- */
+  .sidebar nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;   /* wraps only if absolutely needed */
+  }
+
+  .sidebar nav ul li {
+    margin: 0;
+  }
+
+  .sidebar nav ul li a {
+    font-size: 14px;
+    padding: 6px 10px;
+    white-space: nowrap;
+  }
+
+  /* --- CONTACT ICONS --- */
+  .sidebar .sidebar-contact-icons {
+    margin-top: 10px;
+  }
+
+  /* --- FOOTER (VIEWS COUNTER) --- */
+  .portfolio-footer {
+  position: absolute;
+  bottom: 14px;
+  right: 12px;        /* ⬅ push to right */
+  left: auto;
+  width: auto;
+  text-align: right; /* ⬅ align text to right */
+  font-size: 12px;
+  color: #6d6a66;
+  pointer-events: none;
+  line-height: 1.4;   /* ✅ adds vertical breathing space */
+  }
+
+  .visit-counter {
+  font-weight: 600;
+  margin-bottom: 4px;
+  }
+
+  .desktop-hint {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    color: rgba(47,44,39,0.7);
+    opacity: 0.8;
+  }
+
+  /* --- MAIN CONTENT --- */
+  .main-content {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+  }
+
+  .tab-content {
+    min-height: auto;
+    width: 100%;
+    padding: 24px 18px;
+  }
+
+  /* --- HOME SECTION --- */
+  #home {
+    min-height: auto;
+    padding: 40px 0;
+  }
+
+  #home .home-content {
+    max-width: 92%;
+    padding: 18px;
+  }
+
+  #home h1 {
+    font-size: 1.6rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  /* --- ABOUT SECTION --- */
+  .about-wrapper-flex {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .about-left,
+  .about-right {
+    max-width: 100%;
+  }
+
+  /* --- PROJECT TILES --- */
+  .project-tile {
+    flex-direction: column !important;
+    gap: 14px !important;
+    align-items: flex-start;
+  }
+
+  .project-tile > a:first-child {
+  flex: 0 0 auto !important;  /* remove fixed width */
+  max-width: 320px;          /* controlled image column */
+  }
+
+  .project-tile img {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+  }
+
+  .project-tile .btn {
+  width: 100%;
+  text-align: center;
+  }
+
+  /* --- RESUME --- */
+  .resume-preview img {
+    max-width: 100%;
+  }
+
+  .resume-download-btn {
+  width: auto;
+  display: inline-block;
+  padding: 10px 18px;
+  }
 }

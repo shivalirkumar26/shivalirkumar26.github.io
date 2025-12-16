@@ -2,30 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Shivali | BI Analyst Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script
+  data-goatcounter="https://shivali-portfolio.goatcounter.com/count"
+  async
+  src="//gc.zgo.at/count.js">
+</script>
 </head>
 <body>
   <div class="container">
-    <div class="sidebar">
-      <img src="photo.jpeg" alt="Shivali Ravindra Kumar">
-      <nav>
-        <ul>
-          <li><a href="#home" class="nav-link active" onclick="showTab('home')">HOME</a></li>
-          <li><a href="#about" class="nav-link" onclick="showTab('about')">ABOUT</a></li>
-          <li><a href="#projects" class="nav-link" onclick="showTab('projects')">PROJECTS</a></li>
-          <li><a href="#resume" class="nav-link" onclick="showTab('resume')">RESUME</a></li>
-        </ul>
-      </nav>
-      <div class="sidebar-contact-icons">
-  <a href="mailto:shivali.ravindrakumar@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
-  <a href="https://www.linkedin.com/in/shivali-r-kumar" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-  <a href="https://github.com/shivalirkumar26" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-</div>
+   <div class="sidebar">
+
+  <!-- CENTER BLOCK -->
+  <div class="sidebar-main">
+
+    <img src="photo.jpeg" alt="Shivali Ravindra Kumar">
+
+    <nav>
+      <ul>
+        <li><a href="#home" class="nav-link active" onclick="showTab('home')">HOME</a></li>
+        <li><a href="#about" class="nav-link" onclick="showTab('about')">ABOUT</a></li>
+        <li><a href="#projects" class="nav-link" onclick="showTab('projects')">PROJECTS</a></li>
+        <li><a href="#resume" class="nav-link" onclick="showTab('resume')">RESUME</a></li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-contact-icons">
+      <a href="mailto:shivali.ravindrakumar@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/shivali-r-kumar" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/shivalirkumar26" target="_blank"><i class="fab fa-github"></i></a>
     </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="portfolio-footer">
+  <div class="visit-counter">
+    Views: <span id="gc-count">–</span>
+  </div>
+
+  <div class="desktop-hint">
+    Best viewed on desktop
+  </div>
+</div>
+
+</div>
 
     <div class="main-content">
       <section id="home" class="tab-content">
@@ -253,12 +279,29 @@
         </div>
       </section>
 
-      <section id="resume" class="tab-content">
-        <div class="content-wrapper">
-          <h2>Resume</h2>
-          <p><a href="Shivali_Ravindra_Kumar_Resume.pdf" target="_blank">Download My Resume (PDF)</a></p>
-        </div>
-      </section>
+     
+          <section id="resume" class="tab-content">
+  <div class="content-wrapper resume-wrapper">
+
+    <h2>RESUME</h2>
+
+    <!-- Resume Preview -->
+    <div class="resume-preview">
+      <img src="resume-preview.png" alt="Shivali Ravindra Kumar Resume Preview">
+    </div>
+
+    <!-- Download Button -->
+    <div class="resume-actions">
+      <a href="Shivali_Ravindra_Kumar_Resume.pdf"
+         target="_blank"
+         class="btn resume-download-btn">
+        Download Resume (PDF)
+      </a>
+    </div>
+
+  </div>
+</section>
+        
     </div>
   </div>
 
@@ -308,5 +351,30 @@
     observer.observe(item);
   });
 </script>
+
+
+  
+<script>
+(function () {
+  var t = setInterval(function () {
+    if (window.goatcounter && window.goatcounter.get_data) {
+      clearInterval(t);
+
+      // TOTAL = site-wide visits (matches GoatCounter dashboard)
+      fetch('https://shivali-portfolio.goatcounter.com/counter/TOTAL.json')
+        .then(res => res.json())
+        .then(data => {
+          var el = document.getElementById('gc-count');
+          if (el) el.textContent = data.count;
+        })
+        .catch(() => {
+          var el = document.getElementById('gc-count');
+          if (el) el.textContent = '–';
+        });
+    }
+  }, 200);
+})();
+</script>
+  
 </body>
 </html>
