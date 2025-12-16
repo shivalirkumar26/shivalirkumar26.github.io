@@ -106,6 +106,20 @@ body {
   flex: 1;                   /* ✅ takes remaining vertical space */
 }
 
+.desktop-hint {
+  display: none;   /* hidden on desktop by default */
+}
+
+@media (max-width: 768px) {
+  .desktop-hint {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    color: rgba(47,44,39,0.7);
+    text-align: center;
+  }
+}
+
 /* ========== MAIN CONTENT ========== */
 .main-content {
   flex: 1;
