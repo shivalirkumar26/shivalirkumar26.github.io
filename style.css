@@ -884,9 +884,11 @@ a:hover {
   pointer-events: none;  /* avoids interaction issues */
 }
 
-.visit-counter img {
-  max-width: 160px;
-  opacity: 0.9;
+.visit-counter {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4A473E;
+  text-align: center;
 }
 
 /* Mobile: soften message */
