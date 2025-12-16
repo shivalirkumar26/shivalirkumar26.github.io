@@ -574,3 +574,29 @@ a:hover {
   #project-cyclistic { padding: 14px !important; }
   #project-cyclistic a[ href*="public.tableau.com" ] { flex: none !important; width: 100% !important; }
 }
+/* -------------------------
+   Executive KPI tile styling
+   ------------------------- */
+
+#project-executive-kpi {
+  background: #FCFAF6 !important;
+  border: 1px solid #E1D2C3 !important;
+  box-shadow: 0 8px 22px rgba(46,38,30,0.06) !important;
+}
+
+#project-executive-kpi h3 {
+  color: #4A473E !important;
+  font-weight: 700 !important;
+}
+
+#project-executive-kpi p {
+  color: #4A473E !important;
+}
+
+#project-executive-kpi a.btn {
+  transition: transform .12s ease, box-shadow .12s ease !important;
+}
+
+#project-executive-kpi a.btn:hover {
+  transform: translateY(-2px) !important;
+}
