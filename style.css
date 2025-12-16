@@ -601,3 +601,44 @@ a:hover {
 #project-executive-kpi a.btn:hover {
   transform: translateY(-2px) !important;
 }
+
+/* =========================
+   Project Insight Line
+   ========================= */
+
+.project-insight {
+  margin: 10px 0 12px 0;
+  padding-left: 12px;
+  border-left: 3px solid #A07C48;   /* warm brown accent */
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4A473E;
+  background: transparent;
+}
+
+.project-insight strong {
+  color: #2F2C27;
+  font-weight: 700;
+}
+
+/* =========================
+   Project Tags
+   ========================= */
+
+.project-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 6px 0 14px 0;
+}
+
+.project-tags span {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(160, 124, 72, 0.12); /* soft brown tint */
+  color: #4A473E;
+  border: 1px solid rgba(160, 124, 72, 0.28);
+  white-space: nowrap;
+}
