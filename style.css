@@ -10,10 +10,8 @@ body {
 
 .container {
   display: flex;
+  width: 100vw;
   min-height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  flex-direction: row;
 }
 
 html, body {
@@ -23,16 +21,20 @@ html, body {
 /* ========== SIDEBAR ========== */
 .sidebar {
   width: 260px;
-  background-color: #A07C48; /* warm brown */
+  background-color: #A07C48;
   padding: 20px 15px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  position: fixed;     /* ✅ FIXED */
+  top: 0;
+  left: 0;
   height: 100vh;
-  z-index: 2;
-  position: relative;
+
+  z-index: 10;
   box-shadow: 0 6px 18px rgba(46, 38, 30, 0.08);
 }
 
@@ -119,13 +121,15 @@ html, body {
 
 /* ========== MAIN CONTENT ========== */
 .main-content {
-  flex: 1;
-  position: relative;
-  overflow-x: auto;
+  margin-left: 260px;      /* ✅ same as sidebar width */
+  width: calc(100vw - 260px);
+  height: 100vh;
+
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+
+  position: relative;
   background-color: transparent;
-  min-width: 0;
 }
 
 
