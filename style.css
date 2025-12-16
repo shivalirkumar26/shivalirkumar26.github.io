@@ -616,6 +616,8 @@ a:hover {
 .resume-preview img {
   width: 100%;
   max-width: 720px;
+  height: auto;
+  image-rendering: auto;
   border-radius: 10px;
   box-shadow: 0 10px 28px rgba(46,38,30,0.12);
   border: 1px solid rgba(225,210,195,0.6);
