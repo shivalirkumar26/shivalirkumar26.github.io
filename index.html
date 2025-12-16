@@ -8,11 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-   <script
-  data-goatcounter="https://shivali-portfolio.goatcounter.com/count"
-  async
-  src="//gc.zgo.at/count.js">
-</script>
 </head>
 <body>
   <div class="container">
@@ -43,17 +38,8 @@
   <!-- FOOTER -->
   <div class="portfolio-footer">
   <div class="visit-counter">
-    <img
-  src="https://shivali-portfolio.goatcounter.com/counter/TOTAL.svg
-    ?no_branding=1
-    &style=%23gcvc-border{display:none;}
-           %23gcvc-for{display:none;}
-           %23gcvc{fill:%234A473E;}
-           %23gcvc-views{font-weight:600;}"
-  alt="Visitor count"
-  loading="lazy"
-/>
-  </div>
+  Views: <span id="gc-count">–</span>
+</div>
 
   <div class="desktop-hint">
     Best viewed on desktop
@@ -360,5 +346,25 @@
     observer.observe(item);
   });
 </script>
+
+<script
+  data-goatcounter="https://shivali-portfolio.goatcounter.com/count"
+  async
+  src="//gc.zgo.at/count.js">
+</script>
+  
+<script>
+  var t = setInterval(function () {
+    if (window.goatcounter && window.goatcounter.visit_count) {
+      clearInterval(t);
+      window.goatcounter.visit_count({
+        append: '#gc-count',
+        no_branding: true,
+        path: 'TOTAL'
+      });
+    }
+  }, 100);
+</script>
+  
 </body>
 </html>
