@@ -133,18 +133,16 @@ body {
 }
 
 /* ========== HOME SECTION ========== */
-#home::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+#home {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   background-image: url('background.jpg');
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;          /* fill entire container */
-  background-color: #F3E8D8;       /* blends edges */
-  z-index: 0;
-  opacity: 0.50;
-  pointer-events: none;
+  background-size: cover;
 }
 
 #home .home-content {
@@ -154,6 +152,22 @@ body {
   animation: fadeIn 1.5s ease;
   color: #2F2C27;
   z-index: 1;
+}
+
+@media (max-width: 768px) {
+  #home .home-content {
+    background: rgba(246, 239, 231, 0.85);
+    border-radius: 14px;
+    padding: 20px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tab-content {
+    min-height: auto;
+    padding-top: 20px;
+  }
 }
 
 #home h1 {
@@ -428,25 +442,45 @@ a:hover {
     flex-direction: column;
   }
 
-  .sidebar {
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 14px;
-  }
+  /* ===== MOBILE TOP NAV BAR ===== */
 
-  .sidebar img {
-    width: 72px;
-    margin-bottom: 0;
-  }
+.sidebar {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  padding: 10px 12px;
+}
 
-  .sidebar nav ul {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: center;
-  }
+/* Profile image smaller */
+.sidebar img {
+  width: 56px;
+  border-radius: 8px;
+}
+
+/* Nav menu horizontal */
+.sidebar nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav links compact */
+.sidebar nav ul li {
+  margin: 0;
+}
+
+.sidebar nav ul li a {
+  font-size: 14px;
+  padding: 6px 8px;
+}
+
+/* Hide text shadow hover jump on mobile */
+.sidebar a:hover {
+  transform: none;
+}
 
   .about-wrapper-flex {
     flex-direction: column;
