@@ -98,6 +98,12 @@ body {
   transform: translateY(-3px);
 }
 
+.sidebar-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* ========== MAIN CONTENT ========== */
 .main-content {
   flex: 1;
