@@ -542,9 +542,10 @@ a:hover {
 
 /* View Code button (GitHub link) */
 #project-cyclistic a.btn[href*="github.com"] {
-  background: transparent !important;
-  color: #4A473E !important;
-  border: 1px solid rgba(74,71,62,0.12) !important;
+  background: #F6EFE7 !important;      /* light cream fill */
+  color: #4A473E !important;           /* dark brown text */
+  border: 1px solid #A07C48 !important;/* warm brown outline */
+  font-weight: 600 !important;
 }
 #project-cyclistic a.btn[href*="github.com"]:hover {
   background: rgba(74,71,62,0.04) !important;
@@ -573,4 +574,71 @@ a:hover {
 @media (max-width: 920px) {
   #project-cyclistic { padding: 14px !important; }
   #project-cyclistic a[ href*="public.tableau.com" ] { flex: none !important; width: 100% !important; }
+}
+/* -------------------------
+   Executive KPI tile styling
+   ------------------------- */
+
+#project-executive-kpi {
+  background: #FCFAF6 !important;
+  border: 1px solid #E1D2C3 !important;
+  box-shadow: 0 8px 22px rgba(46,38,30,0.06) !important;
+}
+
+#project-executive-kpi h3 {
+  color: #4A473E !important;
+  font-weight: 700 !important;
+}
+
+#project-executive-kpi p {
+  color: #4A473E !important;
+}
+
+#project-executive-kpi a.btn {
+  transition: transform .12s ease, box-shadow .12s ease !important;
+}
+
+#project-executive-kpi a.btn:hover {
+  transform: translateY(-2px) !important;
+}
+
+/* =========================
+   Project Insight Line
+   ========================= */
+
+.project-insight {
+  margin: 10px 0 12px 0;
+  padding-left: 12px;
+  border-left: 3px solid #A07C48;   /* warm brown accent */
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4A473E;
+  background: transparent;
+}
+
+.project-insight strong {
+  color: #2F2C27;
+  font-weight: 700;
+}
+
+/* =========================
+   Project Tags
+   ========================= */
+
+.project-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 6px 0 14px 0;
+}
+
+.project-tags span {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(160, 124, 72, 0.12); /* soft brown tint */
+  color: #4A473E;
+  border: 1px solid rgba(160, 124, 72, 0.28);
+  white-space: nowrap;
 }
