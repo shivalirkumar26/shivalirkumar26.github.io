@@ -755,7 +755,7 @@ a:hover {
   /* --- FOOTER (VIEWS COUNTER) --- */
   .portfolio-footer {
   position: absolute;
-  bottom: 14px;
+  bottom: 5px;
   right: 12px;        /* ⬅ push to right */
   left: auto;
   width: auto;
@@ -763,7 +763,7 @@ a:hover {
   font-size: 12px;
   color: #6d6a66;
   pointer-events: none;
-  line-height: 1.4;   /* ✅ adds vertical breathing space */
+  line-height: 1.2;   /* ✅ adds vertical breathing space */
   }
 
   .visit-counter {
