@@ -846,10 +846,12 @@ a:hover {
     display: block;
   }
 
-  .project-tile .btn {
-  width: 100%;
-  text-align: center;
-  }
+ /* Normalize ALL project buttons on mobile */
+.project-tile .btn {
+  width: 100% !important;
+  max-width: 100%;
+  box-sizing: border-box;
+}
 
   /* --- RESUME --- */
   .resume-preview img {
