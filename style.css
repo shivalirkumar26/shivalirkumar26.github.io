@@ -769,6 +769,7 @@ a:hover {
   .visit-counter {
   font-weight: 600;
   margin-bottom: 4px;
+  text-align: right;
   }
 
   .desktop-hint {
@@ -777,6 +778,7 @@ a:hover {
     font-size: 11px;
     color: rgba(47,44,39,0.7);
     opacity: 0.8;
+    text-align: right;
   }
 
   /* --- MAIN CONTENT --- */
@@ -851,6 +853,7 @@ a:hover {
   width: 100% !important;
   max-width: 100%;
   box-sizing: border-box;
+  text-align: center;
 }
 
   /* --- RESUME --- */
