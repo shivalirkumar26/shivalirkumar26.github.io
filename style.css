@@ -8,6 +8,13 @@ body {
   -moz-osx-font-smoothing:grayscale;
 }
 
+/* GLOBAL IMAGE SAFETY */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* prevents inline image spacing issues */
+}
+
 .container {
   display: flex;
   width: 100vw;
@@ -689,7 +696,7 @@ a:hover {
   html, body {
     width: 100%;
     height: auto;
-    overflow-x: auto;   /* allow horizontal scroll if needed */
+    overflow-x: hidden;   /* do not allow horizontal scroll */
   }
 
   .container {
@@ -774,15 +781,18 @@ a:hover {
 
   /* --- MAIN CONTENT --- */
   .main-content {
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: visible;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;   /* ✅ no sideways movement */
+  overflow-y: visible;
   }
 
   .tab-content {
-    min-height: auto;
-    width: 100%;
-    padding: 24px 18px;
+  min-height: auto;
+  width: 100%;
+  max-width: 100vw;     /* ✅ key */
+  padding: 24px 18px;
+  box-sizing: border-box;
   }
 
   /* --- HOME SECTION --- */
@@ -823,8 +833,8 @@ a:hover {
   }
 
   .project-tile > a:first-child {
-  flex: 0 0 auto !important;  /* remove fixed width */
-  max-width: 320px;          /* controlled image column */
+  width: 100%;
+  max-width: 100%;
   }
 
   .project-tile img {
